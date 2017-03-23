@@ -8,8 +8,6 @@ namespace TrivolloWebApi.Config
 {
     public class SecurityUtils
     {
-        public const string GOOGLE_OAUTH_WEB_CLIENT_ID = "868497777000-e04m90hkibilp7re8f9l3nr4avinf322.apps.googleusercontent.com";
-
         private const int SALT_BYTE_SIZE = 24;
         private const int HASH_BYTE_SIZE = 24;
         private const int PBKDF2_ITERATIONS = 1000;

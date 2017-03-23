@@ -1,5 +1,6 @@
 ﻿using Google.Apis.Oauth2.v2;
 using System;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -65,7 +66,7 @@ namespace TrivolloWebApi.Controllers
 
             if (object.Equals(socialNetworkName, "Google"))
             {
-                _socialNetworkClientId = SecurityUtils.GOOGLE_OAUTH_WEB_CLIENT_ID;
+                _socialNetworkClientId = ConfigurationManager.AppSettings["GoogleClientKey"];
 
                 var tokeninfo_request = new Oauth2Service().Tokeninfo();
                 tokeninfo_request.IdToken = user.SocialNetworkIdToken;
